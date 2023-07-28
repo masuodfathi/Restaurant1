@@ -5,7 +5,7 @@ div.banner{
 .header-img{
     width: 103%;
     transform: rotate(1deg);
-    margin-top: -31px;
+    margin-top: -15px;
     z-index: 1;
     position: relative;
     height: 312px;
@@ -34,6 +34,9 @@ header.header{
     font-size: 1rem;
     color: #eee;
 }
+.header-cart:hover{
+    background: #444444;
+}
 .cart-icon{
     width: 25px;
     height: 25px;
@@ -51,3 +54,140 @@ span.badg{
 .primary-color{
     color: #a4fdf7;
 }
+.main{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    flex-wrap: nowrap;
+    margin: auto;
+    position: relative;
+}
+.meal-summary{
+    border: 15px solid #6a6a6a;
+    background: #4b4b4b;
+    padding: 15px;
+    border-radius: 35px;
+    z-index: 5;
+    color: #e2e2e2;
+    box-shadow: 0 0 8px 0px #222222;
+    width: 90%;
+    margin: -15% auto 12px;
+}
+.meal-summary:hover{
+    box-shadow: 0 0 8px 0px #373737;
+    background: #555;
+}
+.meal-summary p{
+    font-size: 0.8rem;
+}
+.meal-item *{
+    margin: 0;
+}
+.meal-item h3{
+    font-size: 1rem;
+    font-weight: 600;
+}
+.meal-item .description{
+    font-style: italic;
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+.meal-item .price{
+    font-size: .9rem;
+    font-weight: 600;
+    color: #3d83d1;
+}
+.card{
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    border-radius: 14px;
+    background-color: white;
+}
+.card ul{
+    list-style: none;
+    padding: 0;
+}
+.card ul li{
+    border-bottom: 1px solid rgba(162, 162, 162, 0.5);
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.card ul li:last-child{
+    border: none;
+}
+.backdrop{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #000;
+    opacity: 0.6;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal{
+    width: 60%;
+    background-color: #eee;
+    position: absolute;
+    z-index: 40;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    height: fit-content;
+    right: 0;
+    left: 0;
+    border-radius: 35px;
+    padding: 25px;
+}
+.modal ul{
+    list-style: none;
+    padding: 0;
+}
+.modal .total{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.modal .modal-footer{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+button.primary{
+    cursor: pointer;
+    border-radius: 20px;
+    color: #eaeaea;
+    background-color: #3d83d1;
+    padding: 10px 25px;
+    font-size: 1rem;
+    border: 0;
+    box-shadow: 0 0 7px 2px rgb(25 89 189 / 50%);
+}
+button.primary:hover{
+    background-color: #296bb6;
+}
+button.secondary{
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 10px 25px;
+    font-size: 1rem;
+    border: 1px solid #3d83d1;
+    color: #3d83d1;
+}
+button.secondary:hover{
+    color: #eaeaea;
+    background-color: #5498e6;
+}
+@media only screen and (max-width: 600px) {
+    .header-cart {
+      width: 90px;
+    }
+    .cart-text{
+        display: none;
+    }
+  }

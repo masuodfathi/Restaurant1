@@ -31,7 +31,7 @@ const Meals = [
 const AvailableMeals = () => {
     const mealList = Meals.map((meal)=>{
         return(
-            <MealItem {...meal}/>
+            <MealItem {...meal} key={meal.id}/>
         )
     })
   return (

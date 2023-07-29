@@ -130,7 +130,7 @@ span.badg{
 .modal{
     width: 60%;
     background-color: #eee;
-    position: absolute;
+    position: fixed;
     z-index: 40;
     margin: auto;
     top: 0;

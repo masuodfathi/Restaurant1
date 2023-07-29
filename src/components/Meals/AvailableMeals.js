@@ -25,6 +25,24 @@ const Meals = [
         name:"Ghorme Sabzi",
         description:"Iranian Teraditional Meal with rice",
         price:19.9
+    },
+    {
+        id:"m5",
+        name:"Gheyme",
+        description:"Iranian Teraditional Meal with rice",
+        price:25.9
+    },
+    {
+        id:"m6",
+        name:"Pizza",
+        description:"It can be served by Italian and American type",
+        price:15.9
+    },
+    {
+        id:"m7",
+        name:"Pasta",
+        description:"Italian Teraditional Meal",
+        price:10.9
     }
 ]
 

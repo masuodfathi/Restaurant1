@@ -9,7 +9,6 @@ const Cart = ({ toggleCart }) => {
   const hasItem = selectedItems.length > 0;
 
   const cartItemRemoveHandler = (id) => {
-    console.log('handel remove item')
     cartCTX.removeItem(id);
   };
 

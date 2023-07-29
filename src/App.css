@@ -16,9 +16,10 @@ header.header{
     justify-content: space-around;
     color: #ddd;
     align-items: center;
-    position: relative;
+    position: fixed;
+    width: 100%;
     background: #333;
-    z-index: 2;
+    z-index: 15;
 }
 .header-cart{
     cursor: pointer;
@@ -122,7 +123,7 @@ span.badg{
     position: fixed;
     background-color: #000;
     opacity: 0.6;
-    z-index: 10;
+    z-index: 20;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -144,7 +145,7 @@ span.badg{
 .modal ul{
     list-style: none;
     padding: 0;
-    max-height: 20rem;
+    max-height: 52vh;
     overflow-y: auto;
 }
 .modal .total{
@@ -223,6 +224,29 @@ button.secondary:hover{
     align-items: center;
     justify-content: flex-start;
     gap: 50px;
+}
+.bump{
+    animation: bump 300ms ease-out;
+}
+@keyframes bump{
+    0%{
+        transform: scale(1);
+    }
+    10%{
+        transform: scale(0.9);
+    }
+    30%{
+        transform: scale(1.09);
+    }
+    50%{
+        transform: scale(1.06);
+    }
+    70%{
+        transform: scale(0.9);
+    }
+    100%{
+        transform: scale(1);
+    }
 }
 @media only screen and (max-width: 600px) {
     .header-cart {

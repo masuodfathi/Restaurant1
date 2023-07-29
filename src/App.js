@@ -3,6 +3,7 @@ import './App.css';
 import Meals from './components/Meals/Meals';
 import Cart from './components/Cart/Cart';
 import { useState } from 'react';
+import { CartProvider } from './store/CartContext';
 
 function App() {
   const [cartVisibility,setCartVisibility] = useState(false);
@@ -10,13 +11,13 @@ function App() {
     setCartVisibility(!cartVisibility);
   }
   return (
-    <div>
+    <CartProvider>
       {cartVisibility && <Cart toggleCart={toggleCart}/>}
       <Header toggleCart={toggleCart}/>
       <main className='main'>
         <Meals/>
       </main>
-    </div>
+    </CartProvider>
   );
 }
 

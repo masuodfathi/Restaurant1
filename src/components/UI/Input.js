@@ -1,13 +1,13 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 
-const Input = (props) => {
-    console.log('input ' + props.Input.id)
+const Input = forwardRef((props,ref) => {
+    
   return (
     <section >
         <label htmlFor={props.Input.id}>{props.Input.label}</label>
-        <input {...props.Input} placeholder=''/>
+        <input ref={ref} {...props.Input} placeholder=''/>
     </section>
   )
-}
+});
 
 export default Input

@@ -144,6 +144,8 @@ span.badg{
 .modal ul{
     list-style: none;
     padding: 0;
+    max-height: 20rem;
+    overflow-y: auto;
 }
 .modal .total{
     display: flex;
@@ -182,6 +184,45 @@ button.secondary{
 button.secondary:hover{
     color: #eaeaea;
     background-color: #5498e6;
+}
+.cart-items{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    align-items: center;
+    margin: 10px 0;
+    border-bottom: 1px solid rgba(119, 119, 119,0.5);
+}
+.cart-items h4{
+    margin: 5px;
+}
+.cart-items-buttons{
+    display: flex;
+    gap: 15px;
+}
+.cart-items-buttons button{
+    
+    font-weight: bold;
+    border: 1px solid rgba(119, 119, 119,0.5);
+    border-radius: 10px;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+.cart-items .amount{
+    font-weight: 100;
+    padding: 5px 10px;
+    background: #fff;
+    margin: 0 15px;
+    font-size: smaller;
+    border: 1px solid rgba(119, 119, 119,0.5);
+    border-radius: 20px;
+}
+.cart-items-price-amount{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
 }
 @media only screen and (max-width: 600px) {
     .header-cart {

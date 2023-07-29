@@ -9,20 +9,21 @@ const Cart = ({ toggleCart }) => {
   const hasItem = selectedItems.length > 0;
 
   const cartItemRemoveHandler = (id) => {
-
+    console.log('handel remove item')
+    cartCTX.removeItem(id);
   };
 
   const cartItemAddHandler = (item) => {
-    cartCTX.addItam(item);
+    cartCTX.addItam({...item,amount:1});
   };
 
   const cartItems = (
     <ul>
       {selectedItems.map((item) => {
-        return <CartItems {...item} 
+        return <CartItems {...item}
         key={item.id}
-        onRemove={cartItemRemoveHandler}
-        onAdd={cartItemAddHandler} />;
+        onRemove={cartItemRemoveHandler.bind(null,item.id)}
+        onAdd={cartItemAddHandler.bind(null,item)} />;
       })}
     </ul>
   );

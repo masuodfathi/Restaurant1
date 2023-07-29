@@ -1,29 +1,29 @@
 import React from "react";
 
-const CartItems = ({ price, id, name, amount, onRemove, onAdd }) => {
-  const removeItem = () => {
-    onRemove(id);
-  };
-  const addItem = () => {
-    onAdd({
-      id: id,
-      name:name,
-      amount:1,
-      price:price,
-    });
-  };
+const CartItems = ({ price, name, amount, onRemove, onAdd }) => {
+//   const removeItem = () => {
+//     onRemove(id);
+//   };
+//   const addItem = () => {
+//     onAdd({
+//       id: id,
+//       name:name,
+//       amount:1,
+//       price:price,
+//     });
+//   };
   return (
-    <li>
+    <li className="cart-items">
       <div>
         <h4>{name}</h4>
-        <div>
-          <span>{price}</span>
-          <span>{amount}</span>
+        <div className="cart-items-price-amount">
+          <span>{price.toFixed(2)}</span>
+          <span className="amount">x {amount}</span>
         </div>
       </div>
-      <div>
-        <button onClick={removeItem}>-</button>
-        <button onClick={addItem}>+</button>
+      <div className="cart-items-buttons">
+        <button onClick={onRemove}>-</button>
+        <button onClick={onAdd}>+</button>
       </div>
     </li>
   );

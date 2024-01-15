@@ -256,3 +256,27 @@ button.secondary:hover{
         display: none;
     }
   }
+.add-meal-form{
+    display: flex;
+}
+.add-meal-form>*{
+    padding: 0 5px;
+}
+.add-meal-form button{
+    border-radius: 10px;
+    color: #eee;
+    background-color: #296bb6;
+    border: none;
+    padding: 5px 15px;
+    font-weight: 600;
+}
+.add-meal-form-input>*{
+    padding: 0 5px;
+}
+.add-meal-form-input input{
+    height: 30px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #838383;
+    width: 50px;
+}

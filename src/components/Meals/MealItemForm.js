@@ -16,7 +16,7 @@ const MealItemForm = ({ id, addToCart }) => {
     addToCart(+enteredAmount);
   };
   return (
-    <form onSubmit={submitHandler}>
+    <form onSubmit={submitHandler} className="add-meal-form">
       <Input
         ref={amountInputRef}
         Input={{
@@ -29,7 +29,7 @@ const MealItemForm = ({ id, addToCart }) => {
           label: "Amount",
         }}
       />
-      <button type="submit">+ Add</button>
+      <button type="submit">Add</button>
     </form>
   );
 };
